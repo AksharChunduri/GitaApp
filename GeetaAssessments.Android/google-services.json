@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "109563240196",
+    "firebase_url": "https://bg-assessment-app.firebaseio.com",
+    "project_id": "bg-assessment-app",
+    "storage_bucket": "bg-assessment-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109563240196:android:91e583cfbfa42003f6fa51",
+        "android_client_info": {
+          "package_name": "com.SGS.GeetaAssessments"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109563240196-fn6s5k5ktb4890mee1us6mrls8a2970a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO1n7Si2tEdKIK5WwTzCXwdphifpDTkus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109563240196-fn6s5k5ktb4890mee1us6mrls8a2970a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "109563240196-q49m78kfklipglpu48bjt75f03dj9669.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SGS.GeetaAssessments"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
