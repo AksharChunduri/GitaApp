@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using GeetaAssessments.Services;
 using GeetaAssessments.Views;
 using Xamarin.Forms;
@@ -38,7 +36,8 @@ namespace GeetaAssessments.ViewModels
             string token = await authentication.LoginWithEmailAndPassword(_email, _password);
             if (token != string.Empty)
             {
-                Application.Current.MainPage = new HomePage();
+                await Shell.Current.GoToAsync("Home");
+                //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
             }
         }
     }

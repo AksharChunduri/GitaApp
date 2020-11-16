@@ -1,7 +1,5 @@
-﻿using System;
-using GeetaAssessments.Views;
+﻿using GeetaAssessments.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace GeetaAssessments
 {
@@ -11,7 +9,8 @@ namespace GeetaAssessments
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new LoginPage());
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

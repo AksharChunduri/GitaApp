@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeetaAssessments.Controls.FlyoutHeader"
+             xmlns:local="clr-namespace:GeetaAssessments.MarkupExtensions"
+             HeightRequest="200">
+    <Grid BackgroundColor="Black">
+        <Image Aspect="AspectFill" 
+               Source="{local:ImageResource GeetaAssessments.Images.Swamiji.JPG}"
+               Opacity="0.6" />
+    </Grid>
+</ContentView>

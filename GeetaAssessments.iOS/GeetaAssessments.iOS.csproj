@@ -144,9 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\BGMain.jpeg" />
-    <BundleResource Include="Resources\BG_Background.jpeg" />
     <BundleResource Include="GoogleService-Info.plist" />
     <BundleResource Include="Entitlements.plist" />
+    <BundleResource Include="Resources\BGMain2.jpeg" />
+    <BundleResource Include="Resources\Swamiji.JPG" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
