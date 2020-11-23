@@ -5,28 +5,30 @@
     xmlns:local="clr-namespace:GeetaAssessments.MarkupExtensions"
     xmlns:vm="clr-namespace:GeetaAssessments.ViewModels"
     x:Class="GeetaAssessments.Views.LoginPage"
-    BackgroundColor="White">
+    BackgroundColor="White"
+    Shell.NavBarIsVisible="False">
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-    
-        <Image x:Name="image" Grid.Row="0" Source="{local:ImageResource GeetaAssessments.Images.BGMain2.jpeg}" Aspect="AspectFill"/>
-        <StackLayout Grid.Row="1" >
-            <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email" TabIndex="1" Margin="20,20,20,10"/>
-            <Entry Text="{Binding Password}" Keyboard="Default" IsPassword="True" Placeholder="Password" TabIndex="2" Margin="20,0,20,10"/>
-            <Button Command="{Binding SubmitCommand}" BorderWidth="2" CornerRadius="20" BorderColor="Gray" Text="Login" TabIndex="3"
-                    Margin="50,0,50,10" TextColor="White" BackgroundColor='DeepSkyBlue'/>
+ <RelativeLayout>
+    <Image Source="{local:ImageResource GeetaAssessments.Images.BG_wallpaper.jpg}" Opacity="0.6"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}" Aspect="AspectFill"/>
+    <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email" TabIndex="1" WidthRequest="400"/>
+            <Entry Text="{Binding Password}" Keyboard="Default" IsPassword="True" Placeholder="Password" TabIndex="2" WidthRequest="400"/>
+            <Button Command="{Binding SubmitCommand}" BorderWidth="2" CornerRadius="20" BorderColor="Gray" Text="Login" TabIndex="3" 
+                    TextColor="White" BackgroundColor='Brown'/>
         </StackLayout>
     </Grid>
+  </RelativeLayout>
 </ContentPage.Content>      
 </ContentPage>

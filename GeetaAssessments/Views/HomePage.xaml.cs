@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace GeetaAssessments.Views
 {
@@ -7,7 +6,6 @@ namespace GeetaAssessments.Views
     {
         public HomePage()
         {
-            Shell.Current.FlyoutIsPresented = true;
             InitializeComponent();
         }
     }
