@@ -1,8 +1,7 @@
-﻿using System;
-using System.ComponentModel;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using GeetaAssessments.Services;
 using GeetaAssessments.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace GeetaAssessments.ViewModels
@@ -38,7 +37,10 @@ namespace GeetaAssessments.ViewModels
             string token = await authentication.LoginWithEmailAndPassword(_email, _password);
             if (token != string.Empty)
             {
-                Application.Current.MainPage = new HomePage();
+                await SecureStorage.SetAsync("firebase_token", token);
+                Application.Current.MainPage = new AppShell();
+                //await Shell.Current.GoToAsync("Home");
+                //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
             }
         }
     }

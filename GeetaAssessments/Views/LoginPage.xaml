@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GeetaAssessments.MarkupExtensions"
+    xmlns:vm="clr-namespace:GeetaAssessments.ViewModels"
+    x:Class="GeetaAssessments.Views.LoginPage"
+    BackgroundColor="White"
+    Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+ <RelativeLayout>
+    <Image Source="{local:ImageResource GeetaAssessments.Images.BG_wallpaper.jpg}" Opacity="0.6"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}" Aspect="AspectFill"/>
+    <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email" TabIndex="1" WidthRequest="400"/>
+            <Entry Text="{Binding Password}" Keyboard="Default" IsPassword="True" Placeholder="Password" TabIndex="2" WidthRequest="400"/>
+            <Button Command="{Binding SubmitCommand}" BorderWidth="2" CornerRadius="20" BorderColor="Gray" Text="Login" TabIndex="3" 
+                    TextColor="White" BackgroundColor='Brown'/>
+        </StackLayout>
+    </Grid>
+  </RelativeLayout>
+</ContentPage.Content>      
+</ContentPage>

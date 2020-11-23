@@ -1,7 +1,6 @@
-﻿using System;
-using GeetaAssessments.Views;
+﻿using GeetaAssessments.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace GeetaAssessments
 {
@@ -11,7 +10,16 @@ namespace GeetaAssessments
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new LoginPage());
+            var token = SecureStorage.GetAsync("firebase_token");
+            if (token != null)
+            {
+                MainPage = new LoginPage();
+            }
+            else
+            {
+                MainPage = new AppShell();
+            }
         }
 
         protected override void OnStart()
