@@ -13,6 +13,8 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -23,6 +25,8 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Controls\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\English\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Images\BGMain.jpeg" />
@@ -30,6 +34,10 @@
     <None Remove="Images\IMG_1203.JPG" />
     <None Remove="Images\BG_wallpaper.jpg" />
     <None Remove="icons8-menu.png" />
+    <None Remove="Data\English\Dhyana.json" />
+    <None Remove="Images\Home.png" />
+    <None Remove="Home.png" />
+    <None Remove="plus.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\BGMain.jpeg" />
@@ -37,5 +45,8 @@
     <EmbeddedResource Include="Images\Swamiji.JPG" />
     <EmbeddedResource Include="Images\BG_wallpaper.jpg" />
     <EmbeddedResource Include="menu.png" />
+    <EmbeddedResource Include="Data\English\Dhyana.json" />
+    <EmbeddedResource Include="Home.png" />
+    <EmbeddedResource Include="plus.png" />
   </ItemGroup>
 </Project>

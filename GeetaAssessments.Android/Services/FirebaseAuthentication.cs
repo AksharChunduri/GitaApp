@@ -2,7 +2,11 @@
 using System;
 using System.Threading.Tasks;
 using Android.Gms.Extensions;
+using Firebase;
 using Firebase.Auth;
+using Firebase.Firestore;
+using GeetaAssessments.Droid.ServiceListeners;
+using GeetaAssessments.Models;
 using GeetaAssessments.Services;
 using Xamarin.Forms;
 
@@ -14,7 +18,7 @@ namespace GeetaAssessments.Droid.Services
     {
         public bool IsSignIn()
         {
-            var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
+            FirebaseUser user = FirebaseAuth.Instance.CurrentUser;
             return user != null;
         }
 
@@ -51,5 +55,14 @@ namespace GeetaAssessments.Droid.Services
                 return false;
             }
         }
+
+        public Task<AuthenticatedUser> GetUserAsync()
+        {
+            var tcs = new TaskCompletionSource<AuthenticatedUser>();
+            FirestoreService.Instance.Collection("Users").Document(FirebaseAuth.Instance.CurrentUser.Uid).Get().
+                AddOnCompleteListener(new OnCompleteListener(tcs));
+            return tcs.Task;
+        }
+
     }
 }

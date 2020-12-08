@@ -23,8 +23,8 @@
             RelativeLayout.HeightConstraint=
               "{ConstraintExpression Type=RelativeToParent, Property=Height}">
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email" TabIndex="1" WidthRequest="400"/>
-            <Entry Text="{Binding Password}" Keyboard="Default" IsPassword="True" Placeholder="Password" TabIndex="2" WidthRequest="400"/>
+            <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="sheshasrinivas@yahoo.com" TabIndex="1" WidthRequest="400"/>
+            <Entry Text="{Binding Password}" Keyboard="Default" IsPassword="True" Placeholder="hariom" TabIndex="2" WidthRequest="400"/>
             <Button Command="{Binding SubmitCommand}" BorderWidth="2" CornerRadius="20" BorderColor="Gray" Text="Login" TabIndex="3" 
                     TextColor="White" BackgroundColor='Brown'/>
         </StackLayout>

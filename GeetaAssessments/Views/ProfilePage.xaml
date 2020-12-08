@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GeetaAssessments.Views.ProfilePage">
+             x:Class="GeetaAssessments.Views.ProfilePage"
+             xmlns:vm="clr-namespace:GeetaAssessments.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:ProfileViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Label>
-            Profile
-        </Label>
+        <ListView ItemsSource="{Binding Locations}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Location}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </ContentPage.Content>
 </ContentPage>

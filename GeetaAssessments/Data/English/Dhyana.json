@@ -1,0 +1,35 @@
+﻿{
+  "title": "oṁ śrī paramātmane namaḥ",
+  "subtitle": "",
+  "name": "gītā dhyāna ślokāḥ",
+  "chapterNum": "00",
+  "shlokas": [
+    {
+      "shlokaNum": 1,
+      "lines": [
+        "oṁ pārthāya pratibodhitāṁ bhagavatā",
+        "nārāyaṇena svayaṁ",
+        "vyāsena grathitāṁ purāṇamuninā",
+        "madhye mahābhāratam",
+        "advaitāmṛtavarṣiṇīṁ bhagavatīm",
+        "aṣṭādaśādhyāyinīṁ",
+        "amba tvām anusandadhāmi",
+        "bhagavadgīte bhavadveṣiṇīm"
+      ]
+    },
+    {
+      "shlokaNum": 2,
+      "lines": [
+        "namo'stute vyāsa viśālabuddhe phullāravindāyatapatranetra",
+        "yena tvayā bhārata tailapūrṇaḥ prajvālito jñānamayaḥ pradīpaḥ"
+      ]
+    },
+    {
+      "shlokaNum": 3,
+      "lines": [
+        "prapannapārijātāya totravetraikapāṇaye",
+        "jñānamudrāya kṛṣṇāya gītāmṛtaduhe namaḥ"
+      ]
+    }
+  ]
+}

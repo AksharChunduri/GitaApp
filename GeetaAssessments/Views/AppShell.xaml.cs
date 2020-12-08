@@ -11,7 +11,8 @@ namespace GeetaAssessments.Views
             InitializeComponent();
             RegisterRoutes();
             BindingContext = this;
-            MenuItem menuItem = new MenuItem() { Text="Logout"};
+            MenuItem menuItem = new MenuItem() { Text = "Logout" };
+            
             menuItem.Command = new Command(async () => { Current.FlyoutIsPresented = false; await Current.GoToAsync("login"); });
             Items.Add(menuItem);
         }
@@ -21,6 +22,8 @@ namespace GeetaAssessments.Views
             Routing.RegisterRoute("Home", typeof(HomePage));
             Routing.RegisterRoute("Profile", typeof(ProfilePage));
             Routing.RegisterRoute("login", typeof(LoginPage));
+            Routing.RegisterRoute("CreateSession", typeof(CreateSessionPage));
+            Routing.RegisterRoute("MySessions", typeof(MySessionsPage));
         }
     }
 }
