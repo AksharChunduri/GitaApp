@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Firebase.Auth;
 using Foundation;
+using GeetaAssessments.Models;
 using GeetaAssessments.Services;
 using Xamarin.Forms;
 
@@ -10,6 +11,11 @@ namespace GeetaAssessments.iOS.Services
 {
     public class FirebaseAuthentication : IFirebaseAuthentication
     {
+        public Task<AuthenticatedUser> GetUserAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsSignIn()
         {
             var user = Auth.DefaultInstance.CurrentUser;
@@ -28,6 +34,7 @@ namespace GeetaAssessments.iOS.Services
                 Console.WriteLine(ex.StackTrace);
                 return string.Empty;
             }
+
         }
 
         public bool SignOut()
@@ -42,6 +49,7 @@ namespace GeetaAssessments.iOS.Services
                 Console.WriteLine(ex.StackTrace);
                 return false;
             }
+
         }
     }
 }

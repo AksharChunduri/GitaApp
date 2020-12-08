@@ -36,14 +36,17 @@
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Home">
-        <ShellContent x:Name="Home" Route="Home" ContentTemplate="{DataTemplate ns:HomePage}" IsTabStop="False"/>
+    <FlyoutItem Title="Home" Icon="GeetaAssessments.Images.Home.png">
+        <ShellContent x:Name="Home" Route="Home" ContentTemplate="{DataTemplate ns:HomePage}"/>
     </FlyoutItem>
     <FlyoutItem Title="Profile">
-        <ShellContent x:Name="Profile" Route="Profile" ContentTemplate="{DataTemplate ns:ProfilePage}" IsTabStop="False"/>
+        <ShellContent x:Name="Profile" Route="Profile" ContentTemplate="{DataTemplate ns:ProfilePage}"/>
     </FlyoutItem>
-    <FlyoutItem Title="Sessions">
-        <ShellContent x:Name="Session" Route="Session" ContentTemplate="{DataTemplate ns:SessionPage}" />
+    <FlyoutItem Title="My Sessions">
+            <ShellContent x:Name="MySessions" Route="MySessions" ContentTemplate="{DataTemplate ns:MySessionsPage}" />        
+    </FlyoutItem>
+    <FlyoutItem Title="Reports">
+        <ShellContent x:Name="Reports" Route="Reports" ContentTemplate="{DataTemplate ns:ReportsPage}" />
     </FlyoutItem>
 
 </Shell>

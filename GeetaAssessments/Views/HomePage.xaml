@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeetaAssessments.Views.HomePage"
+             xmlns:vm="clr-namespace:GeetaAssessments.ViewModels"
              >
+    <ContentPage.BindingContext>
+        <vm:HomePageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.png" Command="{Binding CreateNewCommand}"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Label>
             Home Page
