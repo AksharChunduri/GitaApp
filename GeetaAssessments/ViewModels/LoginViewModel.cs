@@ -24,6 +24,13 @@ namespace GeetaAssessments.ViewModels
             set { SetValue(ref _password, value); }
         }
 
+        public bool _areCredentialsInvalid = false;
+        public bool AreCredentialsInvalid
+        {
+            get { return _areCredentialsInvalid;  }
+            set { SetValue(ref _areCredentialsInvalid, value);  }
+        }
+
         public ICommand SubmitCommand { protected set; get; }
         public LoginViewModel()
         {
@@ -37,10 +44,15 @@ namespace GeetaAssessments.ViewModels
             string token = await authentication.LoginWithEmailAndPassword(_email, _password);
             if (token != string.Empty)
             {
+                AreCredentialsInvalid = false;
                 await SecureStorage.SetAsync("firebase_token", token);
                 Application.Current.MainPage = new AppShell();
                 //await Shell.Current.GoToAsync("Home");
                 //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+            }
+            else
+            {
+                AreCredentialsInvalid = true;
             }
         }
     }
